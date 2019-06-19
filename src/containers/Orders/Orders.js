@@ -4,7 +4,7 @@ import axiosInstance from '../../axios-orders'
 import * as actions from '../../store/actions/index'
 import {connect} from 'react-redux'
 import withErrorHandler from '../../hoc/WithErrorHandler/WithErrorHandler'
-import spinner from '../../components/UI/Spinner/Spinner'
+import Spinner from '../../components/UI/Spinner/Spinner'
 
 class Orders extends Component{
 
@@ -31,7 +31,7 @@ class Orders extends Component{
     }
 
     render(){
-        let orders = <spinner/>
+        let orders = <Spinner/>
         if(!this.props.loading){
             console.log('this.props.orders: ',this.props)
             orders = (
